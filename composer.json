@@ -1,0 +1,20 @@
+{
+    "name": "pablo/age",
+    "require-dev": {
+    },
+    "authors": [
+        {
+            "name": "pablo",
+            "email": "pablo@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"src/App/",
+            "Tests\\":"tests/"
+        }
+    }
+}
