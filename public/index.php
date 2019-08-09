@@ -8,4 +8,4 @@
   $age = new \App\Age($date, $today);
   ?>
 
-  Minha idade é <?=$age;?>
+  Minha idade é <?php echo $age;?>
