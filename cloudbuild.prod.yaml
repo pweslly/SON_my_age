@@ -1,11 +1,8 @@
 steps:
-  - id: Building image #como vou chamar
-    name: gcr.io/cloud-builders/docker # como ele vai dá build nessa imagem ? ele vai chamar esse camarada, esse comando é proprio build do google para ele conseguir roda o docker dentro do process continuo dele
-    args: ['build','-t','gcr.io/$PROJECT_ID/myage:$SHORT_SHA','-f','Dockerfile','.'] #Aqui vou criar meus argumentos. $SHORT_SHA essa parte gera um chave para cada release que eu fizer. Na parte do myage é onde fica nome da minha imagem. O -f para selecionar o meu arquivo que eu quero que execute
-  
-  - id: Pushing Image
-    name: grc.io/cloud-builders/docker
-    args: ['push','gcr.io/$PROJECT_ID/myage:$SHORT_SHA']
-
-
-    # o que estou fazendo ? Baixar imagem e depois fazer push para dentro do registry do google cloud
+    - id: Building image 
+      name: gcr.io/cloud-builders/docker 
+      args: ['build','-t','gcr.io/$PROJECT_ID/myage:$SHORT_SHA','-f','Dockerfile','.']
+       
+    - id: Pushing Image
+      name: gcr.io/cloud-builders/docker
+      args: ['push','gcr.io/$PROJECT_ID/myage:$SHORT_SHA']         
