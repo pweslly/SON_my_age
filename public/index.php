@@ -5,7 +5,7 @@
   $date->setDate(1984,9,8);
   $today = new \DateTime;
 
-  $age = new \App\Age($date, $today);
+  $age = new \App\Age($date,$today);
   ?>
 
-  Minha idade é <?php echo $age;?>
+  Minha idade é <?= $age->calculate();?>
